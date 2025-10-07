@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simply Essentials</title>
+  <style>
+    :root {
+      --bg-color: #919090;
+      --text-color: #111;
+      --card-bg: #fff;
+    }
+
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #f1f1f1;
+      --card-bg: #1f1f1f;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+      background-color: var(--card-bg);
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    header h2 {
+      font-weight: normal;
+      margin-top: 0;
+    }
+
+    header p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 0.95rem;
+    }
+
+    .toggle-btn {
+      margin: 20px auto;
+      display: block;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background-color: #555555;
+    }
+
+    .grid-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      padding: 20px;
+    }
+
+    .image-item {
+  flex: 1 1 calc(25% - 16px);
+  box-sizing: border-box;
+  max-width: calc(25% - 16px);
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  text-align: center;
+  overflow: hidden;
+}
+
+.image-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+    .image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px 20px 0 0; /* only round top corners */
+}
+
+body.dark-mode .image-item {
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .image-item:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
+
+
+    .caption {
+      padding: 10px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .image-item {
+        flex: 1 1 calc(50% - 16px);
+        max-width: calc(20% - 16px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image-item {
+        flex: 1 1 100%;
+        max-width: 20%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Simply Essentials</h1>
+    <h2>Basic apps for day-to-day life</h2>
+    <p>
+      Got ideas? Share them and I’ll build the app! Feedback on existing features is also welcome.
+    </p>
+  </header>
+
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode 🌙</button>
+
+  <div class="grid-container">
+    <!-- You can update hrefs and alt text as needed -->
+    <div class="image-item">
+      <a href="https://davekaratapu.github.io/budgetCalculator/" target="_blank">
+        <img src="budgetCalc.png" alt="Budget Calculator" />
+      </a>
+    </div>
+    <div class="image-item">
+      <a href="#" target="_blank">
+        <img src="budgetCalc.png" alt="Book Reading App" />
+      </a>
+      <div class="caption">Book Reader</div>
+    </div>
+    <div class="image-item">
+      <a href="#" target="_blank">
+        <img src="budgetCalc.png" alt="Loan Calculator" />
+      </a>
+      <div class="caption">Loan Calculator</div>
+    </div>
+    <div class="image-item">
+      <a href="#" target="_blank">
+        <img src="budgetCalc.png" alt="Tip Calculator" />
+      </a>
+      <div class="caption">Tip Calculator</div>
+    </div>
+    <div class="image-item">
+      <a href="#" target="_blank">
+        <img src="fuelMiles.png" alt="Fuel Miles Tracker" />
+      </a>
+      <div class="caption">Fuel Miles Tracker</div>
+    </div>
+    <div class="image-item">
+      <a href="#" target="_blank">
+        <img src="DailyPanner.png" alt="Daily Planner" />
+      </a>
+      <div class="caption">Daily Planner</div>
+    </div>
+    <div class="image-item">
+      <a href="#" target="_blank">
+        <img src="Todolist.png" alt="To-Do List" />
+      </a>
+      <div class="caption">To-Do List</div>
+    </div>
+    <div class="image-item">
+      <a href="#" target="_blank">
+        <img src="QuickNote.png" alt="Quick Note" />
+      </a>
+      <div class="caption">Quick Note</div>
+    </div>
+    <div class="image-item">
+      <a href="#" target="_blank">
+        <img src="Movietowatch.png" alt="Movie Watchlist" />
+      </a>
+      <div class="caption">Movie Watchlist</div>
+    </div>
+    <div class="image-item">
+      <a href="#" target="_blank">
+        <img src="Codeeditor.png" alt="Code Editor" />
+      </a>
+      <div class="caption">Code Editor</div>
+    </div>
+    <div class="image-item">
+      <a href="#" target="_blank">
+        <img src="spintruthndare.png" alt="Spin Truth or Dare" />
+      </a>
+      <div class="caption">Spin Truth or Dare</div>
+    </div>
+    <div class="image-item">
+      <a href="#" target="_blank">
+        <img src="etc.png" alt="More Apps" />
+      </a>
+      <div class="caption">More Apps</div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
+</body>
+</html>
